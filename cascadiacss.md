@@ -15,6 +15,7 @@
 - [Flipping Tables](#flipping-tables)
 - [Components, tools, and services](#components-tools-and-services)
 - [PostCSS in Sass](#postcss-in-sass)
+- [SVG: so very good](#svg-so-very-good)
 
 <!-- /MarkdownTOC -->
 
@@ -211,3 +212,35 @@ _Questions_
   * list-selectors
   * postcss-bem-linter
 
+## SVG: so very good
+> **Tyler Sticka**
+
+> tw: [@tylersticka](http://twitter.com/tylersticka)
+
+* how to make resolution independent icons
+  * triangles with clever border hacks
+* Icon fonts are the most pervasive hack
+* Github legitimized it with release of octicons, bootstrap with font awesome
+* How it works
+  1. start with svgs
+  2. map to unicode (usually in private use area)
+  3. generates binary font files
+  4. Optimize legibility in css
+  5. Use pseudo elements with classes
+* Convenience trumps the problems with it
+* Icon fonts create issues for dislexic users with specific extensions that replace webfonts
+  * all the icons get replaced with the lovely blank box (gobble-dee-gook as he said)
+* ⭐⭐⭐⭐🐴
+* Adobe gave us postscript to describe vectors for print
+* Bitmap sucks for icons (well basically)
+* Scalable Vector Graphics to the rescue!
+  * vector based
+  * XML based
+  * subset of HTML5
+* 97% of global user support (better support than font-face)
+* SVG is an open format (not a black box like JPG, GIF, etc)
+* Opens up possibilities to access all component parts
+* `currentColor` inherits from parent CSS color
+* `<style>` blocks with media queries in the SVG source file - **NICE**
+* manipulate images with filters
+* Useful, accessible, fun
