@@ -13,6 +13,8 @@
 - [CSS Pseudo & beyond](#css-pseudo--beyond)
 - [Creating Beautiful, Accessible, and User-Friendly Forms](#creating-beautiful-accessible-and-user-friendly-forms)
 - [Flipping Tables](#flipping-tables)
+- [Components, tools, and services](#components-tools-and-services)
+- [PostCSS in Sass](#postcss-in-sass)
 
 <!-- /MarkdownTOC -->
 
@@ -137,3 +139,75 @@ _Questions_
   * change to graph format with dense information
 * examples
   * hand tailoring to each context of use
+
+## Components, tools, and services
+> **Alice Bartlett**
+
+> tw: [@alicebartlett](http://twitter.com/alicebartlett)
+
+* considerations for creating a component system
+* financial times is fragmented, needed a system to maintain consistency
+* components
+  * html, css, js
+  * prefix for system (origami uses `o`, like `o-video`)
+* how to developers use the components in their projects 
+* the best tooling is no tooling
+* if sites all use the same language === easy
+* however - different languages require different approaches
+  * option 1 - template resolution for every language 
+  * option 2 - no templating
+* Using Origami
+  * use copy and paste
+  * needs consistent naming conventions (in this case, BEM)
+  * Build service that generates code needed for components
+  * NPM package for smaller things like color 
+* Documentation
+  * needs to reach your user base's expectations
+  * be approachable
+  * documentation styleguide is useful
+* Marketing 
+  * need to sell it within the organization
+  * get advocates in the organization
+* Support
+  * be kind and open to their hesitation
+  * addressing concerns
+* Examples
+  * [https://www.futurelearn.com/pattern-library](https://www.futurelearn.com/pattern-library)
+  * lightning design system
+
+## PostCSS in Sass
+> **James Steinbach**
+
+> tw: [@jdsteinbach](http://twitter.com/jdsteinbach)
+
+> w: [https://jdsteinbach.com/sass-postcss/#/](https://jdsteinbach.com/sass-postcss/#/)
+
+> gh: [www.github.com/jdsteinbach](http://www.github.com/jdsteinbach)
+
+* Don't let pride stop you from trying new tools
+* Both are preprocessors
+* PostCSS generates an abtract syntax tree of CSS
+  * this gives us an API to loop through the object and modify it
+* Sass, Less, Stylus pros
+  * variables
+  * conditionals & loops
+  * functions
+  * documentation and community
+* PostCSS Pros
+  * manipulate CSS
+    * vendor prefixes, syntax cleanup, sorting, shortening, formatting
+  * custom syntax
+    * things like grid builders - `@include span(3 of 12);` versus `span: 3 12;`
+* PostCSS tips
+  * avoid non-css input
+  * careful with "prolly-fill" code
+* Plugins
+  * autoprefixer
+  * postcss-sorting
+  * cssnano
+  * (**my fav**) stylelint (highlights pitfalls like declarations that have width declared but is set to `display: inline;`)
+  * css-colorguard
+  * cssstats
+  * list-selectors
+  * postcss-bem-linter
+
