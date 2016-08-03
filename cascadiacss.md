@@ -1,6 +1,6 @@
 ------
 
-**[Back to the readme 📖](cascadiacss.md)**
+**[Back to the readme 📖](readme.md)**
 
 ------
 
