@@ -10,14 +10,17 @@
 - [Color Theory](#color-theory)
 - [Bauhaus Design in the Browser](#bauhaus-design-in-the-browser)
 - [Code Patterns for Pattern-Making](#code-patterns-for-pattern-making)
-- [CSS Pseudo beyond](#css-pseudo-beyond)
+- [CSS Pseudo & beyond](#css-pseudo--beyond)
+- [Creating Beautiful, Accessible, and User-Friendly Forms](#creating-beautiful-accessible-and-user-friendly-forms)
+- [Flipping Tables](#flipping-tables)
 
 <!-- /MarkdownTOC -->
 
 
 ## Color Theory
 > **Natalya Shelborne**
-> tw: @natalyathree
+
+> tw: [@natalyathree](http://twitter.com/natalyathree)
 
 * Color wheel - color relationships
 * http://tallys.github.io/color-theory/
@@ -28,11 +31,12 @@
 * color picking is a decision tree based on two complimentary colors
 
 _Questions_
-* only use two colors?
+* is it best to only use two base complimentary colors?
 
 ## Bauhaus Design in the Browser
 > **Justin McDowell**
-> tw: @revoltpuppy
+
+> tw: [@revoltpuppy](http://twitter.com/revoltpuppy)
 
 * Form and function - bauhaus times
 * CSS as art
@@ -48,11 +52,12 @@ _Questions_
 * shapes
   * flow text around
   * `shape-outside`, `shape-inside`
-* brauser support 
+* brauser support heh
 
 ## Code Patterns for Pattern-Making
 > **Miriam Suzanne**
-> tw: @mirisuzanne
+
+> tw: [@mirisuzanne](http://twitter.com/mirisuzanne)
 
 * building css systems depend on your context
 * bootstrap doesn't work for everyone
@@ -76,11 +81,44 @@ _Questions_
 * Make patterns the lazy option
 * Using markup preprocessors with templates
 
-## CSS Pseudo beyond
+## CSS Pseudo & beyond
 > **Mike Kivikoski
-> tw: @mkivikoski
-> w: bit.ly/pseudo-slides
+
+> tw: [@mkivikoski](http://twitter.com/mkivikoski)
+
+> w: [bit.ly/pseudo-slides](http://bit.ly/pseudo-slides)
+
 > design build test repeat podcast
 
 * `:classes` vs `::elements`
+* lots of different types now available
 
+## Creating Beautiful, Accessible, and User-Friendly Forms
+> **Clarissa Peterson**
+
+> tw: [@clarissa](http://twitter.com/clarissa)
+
+* less inputs is better for the user
+* use the newer input types - `month, date, datetime, email, url, number`
+  * use min and max to get logical dates
+  * pattern matching using regex
+* avoid dropdowns if lower amount of options
+* radiobuttons as buttons using `input:checked` 
+  * wrap in a label, use a pseudo element or add a span inside after the input 
+* optgroups to organize big dropdowns
+* don't use placeholders without labels
+* default placeholder text doesn't meet accessibility standards
+* pseudo `:valid, :invalid` with items that have a pattern and required attribute
+
+## Flipping Tables
+> **Stephanie Hobson**
+
+> tw: [@stephaniehobson](http://twitter.com/stephaniehobson)
+
+* techniques to flip tables from wide to tall
+* when to use tables
+  * 
+* creating structure
+* designing tables
+* styling
+* adapting tables to small screens
