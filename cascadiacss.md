@@ -116,9 +116,24 @@ _Questions_
 > tw: [@stephaniehobson](http://twitter.com/stephaniehobson)
 
 * techniques to flip tables from wide to tall
-* when to use tables
-  * 
 * creating structure
+  * `thead, tbody, tfoot` 
+  * tables can have multiple tbodys
+  * attributes: `scope`
 * designing tables
+  * left align text, right align numbers with monospace fonts
+  * contrast, repitition, alignment, proximity
 * styling
+  * `vertical-align: middle`  on td th
+  * border collapse and spacing on `table` only
+  * general styling first then overriding them
+  * td:nth-child for column specificity 
+  * tr:nth-child td for rows
 * adapting tables to small screens
+  * change content (thousands of etc)
+  * linearize data by changing display types on `tr` and `td`
+  * size constrained container with overflow-x
+  * sticky headings with js (or some hacky markup/css combinations)
+  * change to graph format with dense information
+* examples
+  * hand tailoring to each context of use
