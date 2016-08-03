@@ -16,6 +16,7 @@
 - [Components, tools, and services](#components-tools-and-services)
 - [PostCSS in Sass](#postcss-in-sass)
 - [SVG: so very good](#svg-so-very-good)
+- [Learning and feeling overwhelming](#learning-and-feeling-overwhelming)
 
 <!-- /MarkdownTOC -->
 
@@ -244,3 +245,23 @@ _Questions_
 * `<style>` blocks with media queries in the SVG source file - **NICE**
 * manipulate images with filters
 * Useful, accessible, fun
+
+## Learning and feeling overwhelming
+> **Lourdes Montano**
+
+> [@loumontano](http://twitter.com/loumontano)
+
+* Fears of new technologies and tools
+* the impostor syndrome
+* refactoring CSS is fragile and error-prone
+* experiments - learn as much from failures as from success
+* self improvement through inspiration - recreate things from codepen etc
+* look back at your progress
+* sign up for newsletters, follow blogs etc
+* side topics can be helpful
+* set short and long term goals
+* create lists of stuff
+* how to apply this at work
+  * messy projects teach a lot
+  * get a code mentor
+* build community and teach others
