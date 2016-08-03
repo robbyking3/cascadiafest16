@@ -5,6 +5,7 @@
 - [Color Theory](#color-theory)
 - [Bauhaus Design in the Browser](#bauhaus-design-in-the-browser)
 - [Code Patterns for Pattern-Making](#code-patterns-for-pattern-making)
+- [CSS Pseudo beyond](#css-pseudo-beyond)
 
 <!-- /MarkdownTOC -->
 
@@ -68,4 +69,15 @@ _Questions_
 * Color styling for palette
   * using a map in Sass - key, value. `map-get` in sass - meaningful structure
 * Make patterns the lazy option
+* Using markup preprocessors with templates
+
+## CSS Pseudo beyond
+> **Mike Kivikoski
+> tw: @mkivikoski
+> w: bit.ly/pseudo-slides
+> design build test repeat podcast
+
+* `:classes` vs `::elements`
+* ::first-line
+* 
 
