@@ -1,4 +1,7 @@
-# CascadiaFest
+---
+**[Back to the readme 📖](cascadiacss.md)**
+---
+
 
 <!-- MarkdownTOC -->
 
@@ -78,6 +81,4 @@ _Questions_
 > design build test repeat podcast
 
 * `:classes` vs `::elements`
-* ::first-line
-* 
 
