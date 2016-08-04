@@ -9,6 +9,7 @@
 
 - [Making it better without making it over](#making-it-better-without-making-it-over)
 - [Demystifying Web workers and service workers](#demystifying-web-workers-and-service-workers)
+- [Using WebGL](#using-webgl)
 
 <!-- /MarkdownTOC -->
 
@@ -83,3 +84,50 @@
   * offline - service workers
 * [Slides](https://github.com/nolanlawson/cascadia-2016)
 
+
+## Using WebGL
+> **Seth Samuel**
+
+> tw: [@sethfsamuel](http://twitter.com/sethfsamuel)
+
+* what is it - a js api to let us talk to the graphics card
+* closest we can get to the metal as a js dev
+* how does it work
+  * api to webgl
+  * webgl sends to OS
+  * OS to graphics driver
+  * GPU paints to canvas
+* Shaders
+  * Data > Vertex Shader > Fragment Shader > Graphics!
+* Vertex Shader
+  * transform data into 3d space coords
+* Generation happens completely in parallel
+* Non blocking calculations - FPS staying up
+* Why is it so powerful?
+  * CPU v GPU
+  * CPU does lots of things pretty well
+  * GPU is very specialized - math in parallel very fast
+* How to get data out of WebGL
+  * `canvas.getImageData` - dump pixels as an array
+  * Implementation challenges
+    * high cost of serialization
+* Why
+  * GPU parallel
+  * `0(n) < 0(n^3)`
+* Potential applications
+  * Hash collision - check password system safety 
+  * Bitcoin mining
+  * Media encoding
+  * Machine learning
+  * Signal analysis/processing
+  * Protein Folding
+* Blockers
+  * No bit operations
+  * Unresponsive Window
+  * OS level timeouts 
+* How to solve
+  * update implementation of shading version
+  * Canvas Webgl in web worker
+* Summary
+  * awesome
+  * powerful
