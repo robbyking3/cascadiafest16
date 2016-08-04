@@ -10,6 +10,8 @@
 - [Making it better without making it over](#making-it-better-without-making-it-over)
 - [Demystifying Web workers and service workers](#demystifying-web-workers-and-service-workers)
 - [Using WebGL](#using-webgl)
+- [In defense of static sites](#in-defense-of-static-sites)
+- [3rd party javascript](#3rd-party-javascript)
 
 <!-- /MarkdownTOC -->
 
@@ -131,3 +133,102 @@
 * Summary
   * awesome
   * powerful
+
+
+## In defense of static sites
+> **Liz Abinante**
+
+> tw: [@feministy](https://twitter.com/feministy)
+
+* js fatigue can be a thing, takes a while sometimes to get things running
+* users don't care about our technical debt, they want new features and better experiences
+* static sites
+  * no database 
+  * no backend
+  * no JS (mostly)
+* what do you need JS for?
+* static sites are cheap
+* S3 won't fall over (usually)
+* Shared responsibility for deploy and owning it 
+* it's just files uploaded
+* very performant
+* Use cases
+  * portfolios
+  * blogs
+  * resumes
+  * prototypes
+  * events and confs
+  * brick and mortar businesses
+  * informational marketing sites
+* Use an api to generate content ahead of time
+
+
+## 3rd party javascript
+> **Noah Adams**
+
+> tw: [@noah_adams](https://twitter.com/noah_adams)
+
+* 3rd part script
+  * end user
+  * publisher of website
+  * anyone else involved
+* Examples - Google Analytics, Intercom, Disqus, BazaarVoice, Social Sharing widgets
+* What
+  * Data collection, Analytics
+  * add functionality (chat, comments)
+  * integrations with other services (social sharing)
+* Third party javascript book (somewhat out of date now)
+* Integration and Delivery
+  * don't break the site
+  * simple as including `<script>` tag
+  * or a js snippet
+  * or tag manager 
+  * how to load 
+    * asap
+    * without blocking rendering
+    * without blocking `load` event
+    * async
+    * in phases with small payload and config early
+    * more as it's needed or convenient
+    * load once then cache
+  * Bake in configuration 
+    * global hooks
+    * comman queue pattern
+  * Markup conventions 
+    * store configs in `data` attributes
+  * Load without clocking the critical path (add `async` attribute to script)
+  * Load more without blocking the load event
+    * use ajax, wait until after load, or block load event
+  * Deliver Code
+    * minify, gzip, compress images
+    * cache
+    * only loader needs short cache time
+    * use a CDN for everything you can
+  * deploying client side apps 1,000 at a time - talk by rmurphey [slides](https://speakerdeck.com/rmurphey/deploying-client-side-apps-1000-or-so-at-a-time)
+* Building Defensively 
+  * like being a guest in someone's home
+  * don't let the site break you
+  * your integration adds another attach surface
+  * unauthorized access, XSS etc
+  * Building web ui defensively 
+    * `<iframe>` 
+    * `window.open()`
+    * web components?
+    * container to dom, with unique Id, serve CSS reset for absolutely everything
+  * Building JS defensively 
+    * contending for every resource - cookies, localstorage, memory, global namespace
+    * what can go wrong examples
+      * browser apis can be extended or changed by customer sites so you can't trust them
+    * fixes - create an iframe, get window object, and return the XML request to make sure
+    * making cross domain request
+      * XHR and CORS
+      * or using [easyXDM](https://github.com/oyvindkinsey/easyXDM)
+* Tools, Testing, and Iteration 
+  * [universal module definition](https://github.com/umdjs/umd)
+  * dynamic checks for module loaders can create race conditions
+  * Testing
+    * use unit tests
+    * test for global variable leaks
+    * run against lots of browsers - sauce labs, browser stack, testily 
+  * build a way to test new versions of your third party scripts against running versions of peoples' page - [charles](https://www.charlesproxy.com/), fiddler
+* [Slides](bit.ly/3rdpartyjs)
