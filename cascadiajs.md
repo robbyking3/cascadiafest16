@@ -12,6 +12,7 @@
 - [Using WebGL](#using-webgl)
 - [In defense of static sites](#in-defense-of-static-sites)
 - [3rd party javascript](#3rd-party-javascript)
+- [Onboarding superhero](#onboarding-superhero)
 
 <!-- /MarkdownTOC -->
 
@@ -231,4 +232,16 @@
     * test for global variable leaks
     * run against lots of browsers - sauce labs, browser stack, testily 
   * build a way to test new versions of your third party scripts against running versions of peoples' page - [charles](https://www.charlesproxy.com/), fiddler
-* [Slides](bit.ly/3rdpartyjs)
+* [Slides](http://bit.ly/3rdpartyjs)
+
+
+## Onboarding superhero
+> **Tara Scherner de la Fuente**
+
+> tw: [@goatuserstories](https://twitter.com/goatuserstories) & [@mediaremedial](https://twitter.com/mediaremedial)
+
+* smooth out knowledge introduction
+* introduce team members or tell the names on the sly
+* be a vulnerable and approachable onboarding super hero
+* make a secret pact
+* ask what instead of do you have (say in case of dietary restrictions)
